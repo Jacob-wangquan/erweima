@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+    <script src="utf.js"></script>
+    <script src="jquery.qrcode.min.js"></script>
+</head>
+<body>
+<div id="qrcode" style="width: 200px; height: 200px; border: 1px solid #ccc; margin: 20px;"></div>
+</body>
+<script>
+    $(function(){
+        $('#qrcode').hover(function () {
+            $(this).qrcode({
+                        text    : "http://www.daiyubang.com",
+                        width : "200",
+                        height : "200",
+                        src: 'icon.jpg'
+            });
+        },function () {
+            $(this).html('');
+                }
+
+        );
+    });
+</script>
+</html>
